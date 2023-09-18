@@ -7,8 +7,8 @@ export default function Page(): JSX.Element {
     (async function getHello() {
       try {
         const resp = await fetch("/api/hello");
-        const data = await resp.json();
-        setData(data.data);
+        const _data = (await resp.json()) as Record<"data", string>;
+        setData(_data.data);
       } catch (error) {
         setData("Error");
       }

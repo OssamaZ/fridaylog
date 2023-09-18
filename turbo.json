@@ -3,18 +3,19 @@
   "globalDependencies": ["**/.env.*local"],
   "globalDotEnv": [".env"],
   "pipeline": {
+    "dev": {
+      "dependsOn": ["^db:generate"],
+      "cache": false,
+      "persistent": true
+    },
     "build": {
-      "dependsOn": ["^build"],
+      "dependsOn": ["^generate", "^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "lint": {
       "dependsOn": ["^build"]
     },
     "check-types": {},
-    "dev": {
-      "cache": false,
-      "persistent": true
-    },
     "clean": {
       "cache": false
     },
@@ -22,7 +23,7 @@
     "db:push": {},
     "db:seed": {},
     "generate": {
-      "dependsOn": ["^generate"]
+      "cache": false
     }
   }
 }

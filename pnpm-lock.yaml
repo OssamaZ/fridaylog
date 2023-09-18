@@ -29,6 +29,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@fridaylog/prisma':
+        specifier: workspace:*
+        version: link:../../packages/prisma
       '@fridaylog/ui':
         specifier: workspace:*
         version: link:../../packages/ui

@@ -39,5 +39,6 @@ module.exports = {
   rules: {
     "import/no-default-export": "off",
     "@typescript-eslint/no-floating-promises": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
   },
 };

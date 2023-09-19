@@ -1,14 +1,22 @@
 import "../styles/globals.css";
 import "@fridaylog/ui/styles.css";
-import type { AppProps } from "next/app";
+import { type AppType } from "next/app";
+import { type Session } from "next-auth";
 import { Inter } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
-export default function App({ Component, pageProps }: AppProps) {
+const App: AppType<{ session: Session | null }> = ({
+  Component,
+  pageProps: { session, ...pageProps },
+}) => {
   return (
-    <main className={`${inter.variable} font-sans`}>
-      <Component {...pageProps} />
-    </main>
+    <SessionProvider session={session}>
+      <main className={`${inter.variable} font-sans`}>
+        <Component {...pageProps} />
+      </main>
+    </SessionProvider>
   );
-}
+};
+export default App;

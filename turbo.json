@@ -4,13 +4,14 @@
   "globalDotEnv": [".env"],
   "pipeline": {
     "dev": {
-      "dependsOn": ["^db:generate"],
+      "dependsOn": ["^generate"],
       "cache": false,
       "persistent": true
     },
     "build": {
       "dependsOn": ["^generate", "^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
+      "env": ["RESEND_API_KEY"]
     },
     "lint": {
       "dependsOn": ["^build"]

@@ -45,6 +45,11 @@ export const authOptions: NextAuthOptions = {
       },
     }),
   },
+  pages: {
+    error: "/auth/error",
+    verifyRequest: "/auth/verify",
+    signIn: "auth/login",
+  },
   adapter: PrismaAdapter(prisma),
   providers: [
     EmailProvider({

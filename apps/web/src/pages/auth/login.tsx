@@ -28,6 +28,7 @@ export default function Login() {
     <form
       className="flex min-h-screen flex-col items-center justify-center"
       onSubmit={(e) => {
+        e.preventDefault();
         login();
       }}
     >

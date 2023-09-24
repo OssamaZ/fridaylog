@@ -1,0 +1,26 @@
+{
+  "name": "@fridaylog/env",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "dotenv -- tsup --watch"
+  },
+  "dependencies": {
+    "@t3-oss/env-nextjs": "^0.6.1",
+    "zod": "^3.22.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.12",
+    "tsconfig": "workspace:*",
+    "dotenv-cli": "^7.3.0",
+    "typescript": "^5.1.6",
+    "tsup": "^6.1.3"
+  }
+}

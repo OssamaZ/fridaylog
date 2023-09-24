@@ -17,7 +17,7 @@
     "db:migrate:dev": "prisma migrate dev",
     "db:push": "prisma db push",
     "db:seed": "tsx src/seed.ts",
-    "generate": "prisma generate",
+    "db:generate": "prisma generate",
     "studio": "prisma studio"
   },
   "devDependencies": {

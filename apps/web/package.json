@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fridaylog/env": "workspace:*",
     "@fridaylog/database": "workspace:*",
     "@fridaylog/ui": "workspace:*",
     "@next-auth/prisma-adapter": "^1.0.7",

@@ -1,4 +1,4 @@
-import { Card } from "@fridaylog/ui";
+import { Button, Card } from "@fridaylog/ui";
 import { useEffect, useState } from "react";
 
 export default function Page(): JSX.Element {
@@ -16,8 +16,14 @@ export default function Page(): JSX.Element {
   }, []);
 
   return (
-    <main className="flex min-h-screen w-full items-center justify-center bg-slate-50">
+    <main className="flex min-h-screen w-full items-center justify-center">
       <Card>{data}</Card>
+      <Button variant="default">Button :)</Button>
+      <Button variant="secondary">Button :)</Button>
+      <Button variant="outline">Button :)</Button>
+      <Button variant="ghost">Button :)</Button>
+      <Button variant="link">Button :)</Button>
+      <Button variant="destructive">Button :)</Button>
     </main>
   );
 }

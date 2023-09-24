@@ -1,5 +1,6 @@
 // styles
-import "./styles.css";
+import "tailwind-config/styles.css";
 
 // components
 export * from "./card";
+export * from "./button";

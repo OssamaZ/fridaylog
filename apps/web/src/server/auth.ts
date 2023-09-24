@@ -103,7 +103,7 @@ function loginHtmlTemplate({
   // clients like Outlook and Apple mail, as this is confusing because it seems
   // like they are supposed to click on their email address to sign in.
   const escapedEmail = `${email.replace(/\./g, "&#8203;.")}`;
-  const escapedHost = `${host.replace(/\./g, "&#8203;.")}`;
+  const _escapedHost = `${host.replace(/\./g, "&#8203;.")}`;
 
   return `
     <table

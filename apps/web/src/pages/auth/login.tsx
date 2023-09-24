@@ -29,7 +29,7 @@ export default function Login() {
       className="flex min-h-screen flex-col items-center justify-center"
       onSubmit={(e) => {
         e.preventDefault();
-        login();
+        void login();
       }}
     >
       <input
@@ -50,7 +50,7 @@ function Redirect() {
   const { replace } = useRouter();
 
   useEffect(() => {
-    replace({
+    void replace({
       pathname: "/",
     });
   }, []);

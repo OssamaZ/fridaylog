@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 export default function Page(): JSX.Element {
   const [data, setData] = useState("Loading ..");
   useEffect(() => {
-    (async function getHello() {
+    void (async function getHello() {
       try {
         const resp = await fetch("/api/hello");
         const _data = (await resp.json()) as Record<"data", string>;

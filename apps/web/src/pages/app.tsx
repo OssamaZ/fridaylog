@@ -18,10 +18,7 @@ export default function App() {
       <p className="text-center text-2xl">
         <span>Logged in as {data.user.email}</span>
       </p>
-      <button
-        className="px-10 py-3 font-semibold"
-        onClick={() => void signOut()}
-      >
+      <button className="px-10 py-3 font-semibold" onClick={() => void signOut()}>
         Sign out
       </button>
     </div>
@@ -32,7 +29,7 @@ function Redirect() {
   const { replace } = useRouter();
 
   useEffect(() => {
-    replace({
+    void replace({
       pathname: "/auth/login",
     });
   }, []);

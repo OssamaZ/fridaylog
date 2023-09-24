@@ -7,7 +7,4 @@ export default async function handler(_: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
     data: `Hello ${message}`,
   });
-  // res.status(200).json({
-  //   data: "Hello world",
-  // });
 }

@@ -10,8 +10,7 @@
     },
     "build": {
       "dependsOn": ["^db:generate", "^build"],
-      "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
-      "env": ["RESEND_API_KEY"]
+      "outputs": ["dist/**", ".next/**", "!.next/cache/**"]
     },
     "lint": {
       "dependsOn": ["^build"]

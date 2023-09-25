@@ -11,7 +11,7 @@
     "build": {
       "dependsOn": ["^db:generate", "^build"],
       "outputs": ["dist/**", ".next/**", "!.next/cache/**"],
-      "env": ["VERCEL_URL", "PORT"]
+      "env": ["VERCEL_URL", "PORT", "NODE_ENV"]
     },
     "lint": {
       "dependsOn": ["^build"]

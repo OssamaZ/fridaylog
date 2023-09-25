@@ -58,7 +58,7 @@ function loginHtmlTemplate({ url, host, email }: Record<"url" | "host" | "email"
           <tr>
             <td>
               <div style="padding: 20px 20px 0">
-                <p style="font-size: 24px; margin: 0">Welcome to Startup Square,</p>
+                <p style="font-size: 24px; margin: 0">Welcome,</p>
                 <p style="margin: 20px 0 0">
                   Please confirm your email <strong>${escapedEmail}</strong>
                 </p>

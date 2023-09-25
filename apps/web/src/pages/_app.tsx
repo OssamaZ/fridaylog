@@ -4,6 +4,7 @@ import { type AppType } from "next/app";
 import { type Session } from "next-auth";
 import { Inter } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
+import { api } from "../utils/api";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
@@ -16,4 +17,5 @@ const App: AppType<{ session: Session | null }> = ({ Component, pageProps: { ses
     </SessionProvider>
   );
 };
-export default App;
+
+export default api.withTRPC(App);

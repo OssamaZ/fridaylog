@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "clean": "turbo run clean",
+    "clean": "turbo run clean && rimraf .turbo node_modules",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "db:migrate:deploy": "turbo run db:migrate:deploy",
     "db:push": "turbo run db:push",
@@ -22,7 +22,8 @@
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.1",
     "tsconfig": "workspace:*",
-    "turbo": "latest"
+    "turbo": "latest",
+    "rimraf": "^5.0.1"
   },
   "packageManager": "bun@1.0.4",
   "workspaces": [

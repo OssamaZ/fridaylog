@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "clean": "rimraf .turbo node_modules dist",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -35,6 +36,7 @@
     "autoprefixer": "^10.4.14",
     "eslint-config-custom": "workspace:*",
     "postcss": "^8.4.27",
+    "rimraf": "^5.0.1",
     "tailwind-config": "workspace:*",
     "tailwindcss": "^3.3.3",
     "tsconfig": "workspace:*",

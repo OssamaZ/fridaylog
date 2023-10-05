@@ -24,5 +24,9 @@
     "tsconfig": "workspace:*",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@8.7.5"
+  "packageManager": "bun@1.0.4",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }

@@ -6,8 +6,6 @@ export const env = createEnv({
     APP_NAME: z.string().min(1),
     DATABASE_URL: z.string().url(),
     DIRECT_DB_URL: z.string().url(),
-    VERCEL_URL: z.string().optional(),
-    PORT: z.string().optional(),
     NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
     NEXTAUTH_SECRET: process.env.NODE_ENV === "production" ? z.string().min(1) : z.string().min(1).optional(),
     NEXTAUTH_URL: z.preprocess(
@@ -35,9 +33,7 @@ export const env = createEnv({
     APP_NAME: process.env.APP_NAME,
     DATABASE_URL: process.env.DATABASE_URL,
     DIRECT_DB_URL: process.env.DIRECT_DB_URL,
-    VERCEL_URL: process.env.VERCEL_URL,
     NODE_ENV: process.env.NODE_ENV,
-    PORT: process.env.PORT,
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     RESEND_API_KEY: process.env.RESEND_API_KEY,

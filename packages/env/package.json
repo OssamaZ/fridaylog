@@ -9,6 +9,7 @@
     "dist/**"
   ],
   "scripts": {
+    "clean": "rimraf .turbo node_modules dist",
     "build": "tsup",
     "dev": "dotenv -- tsup --watch"
   },
@@ -21,6 +22,7 @@
     "tsconfig": "workspace:*",
     "dotenv-cli": "^7.3.0",
     "typescript": "^5.1.6",
-    "tsup": "^6.1.3"
+    "tsup": "^6.1.3",
+    "rimraf": "^5.0.1"
   }
 }

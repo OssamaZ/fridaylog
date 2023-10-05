@@ -6,7 +6,7 @@ export const env = createEnv({
     APP_NAME: z.string().min(1),
     DATABASE_URL: z.string().url(),
     DIRECT_DB_URL: z.string().url(),
-    VERCEL_URL: z.string().url().optional(),
+    VERCEL_URL: z.string().optional(),
     PORT: z.string().optional(),
     NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
     NEXTAUTH_SECRET: process.env.NODE_ENV === "production" ? z.string().min(1) : z.string().min(1).optional(),

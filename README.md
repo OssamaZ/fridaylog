@@ -7,3 +7,5 @@ Setup environment variables
 2- `cd packages/database && ln -s "../../packages/env/.env" ".env"`
 
 3- `cd apps/web && ln -s "../../packages/env/.env" ".env.local"`
+
+4- `cd packages/emails && ln -s "../../packages/env/.env" ".env.local"`

@@ -2,14 +2,31 @@
   "name": "@fridaylog/emails",
   "version": "0.0.1",
   "private": true,
-  "main": "./src/index.ts",
-  "types": "./src/index.ts",
+  "main": "./src/index.tsx",
+  "types": "./src/index.tsx",
   "scripts": {
-    "clean": "rimraf .turbo node_modules .next"
+    "clean": "rimraf .turbo node_modules .next",
+    "dev": "next dev -p 3002"
   },
   "dependencies": {
     "@fridaylog/env": "workspace:*",
-    "resend": "^1.1.0"
+    "@react-email/button": "^0.0.10",
+    "@react-email/container": "^0.0.8",
+    "@react-email/head": "^0.0.5",
+    "@react-email/heading": "^0.0.9",
+    "@react-email/hr": "^0.0.5",
+    "@react-email/html": "^0.0.4",
+    "@react-email/img": "^0.0.5",
+    "@react-email/link": "^0.0.5",
+    "@react-email/preview": "^0.0.6",
+    "@react-email/render": "^0.0.7",
+    "@react-email/section": "^0.0.9",
+    "@react-email/text": "^0.0.5",
+    "next": "^13.5.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "resend": "^1.1.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@types/node": "^17.0.12",

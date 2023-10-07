@@ -4,6 +4,7 @@ import { z } from "zod";
 export const env = createEnv({
   server: {
     APP_NAME: z.string().min(1),
+    APP_URL: z.string().min(1),
     DATABASE_URL: z.string().url(),
     DIRECT_DB_URL: z.string().url(),
     NODE_ENV: z.enum(["development", "test", "production"]).default("development"),
@@ -31,6 +32,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     APP_NAME: process.env.APP_NAME,
+    APP_URL: process.env.APP_URL,
     DATABASE_URL: process.env.DATABASE_URL,
     DIRECT_DB_URL: process.env.DIRECT_DB_URL,
     NODE_ENV: process.env.NODE_ENV,

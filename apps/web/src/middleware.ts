@@ -32,7 +32,7 @@ export default async function middleware(req: NextRequest) {
   } else {
     // there is a token
     if (path.startsWith("/auth")) {
-      return NextResponse.redirect(new URL("/", req.url));
+      return NextResponse.redirect(new URL("/app", req.url));
     }
   }
 }

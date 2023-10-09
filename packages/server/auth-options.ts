@@ -37,9 +37,9 @@ export const authOptions: NextAuthOptions = {
     }),
   },
   pages: {
+    signIn: "/auth/login",
     error: "/auth/error",
     verifyRequest: "/auth/verify",
-    signIn: "auth/login",
   },
   adapter: PrismaAdapter(prisma),
   providers: [

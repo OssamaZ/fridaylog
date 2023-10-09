@@ -1,6 +1,4 @@
 import { signOut, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
 
 export default function App() {
   const { data, status } = useSession();
@@ -10,7 +8,7 @@ export default function App() {
   }
 
   if (status === "unauthenticated" || !data) {
-    return <Redirect />;
+    return <div>Not authenticated</div>;
   }
 
   return (
@@ -23,16 +21,4 @@ export default function App() {
       </button>
     </div>
   );
-}
-
-function Redirect() {
-  const { replace } = useRouter();
-
-  useEffect(() => {
-    void replace({
-      pathname: "/auth/login",
-    });
-  }, []);
-
-  return <p>Redirecting ..</p>;
 }

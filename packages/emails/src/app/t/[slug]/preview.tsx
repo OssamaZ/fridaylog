@@ -35,20 +35,21 @@ export default function Preview({ slug, markup, reactMarkup, plainText }) {
 
   return (
     <div className="flex min-h-screen">
-      {activeView === "desktop" ? (
-        <iframe srcDoc={markup} className="h-[calc(100vh_-_140px)] w-full" />
-      ) : null
-      // <div className="flex gap-6 mx-auto p-6 max-w-3xl">
-      //     <CodeContainer
-      //       markups={[
-      //         { language: 'jsx', content: reactMarkup },
-      //         { language: 'markup', content: markup },
-      //         { language: 'markdown', content: plainText },
-      //       ]}
-      //       activeLang={activeLang}
-      //       setActiveLang={handleLangChange}
-      //     />
-      // </div>
+      {
+        activeView === "desktop" ? (
+          <iframe srcDoc={markup} className="h-[calc(100vh_-_140px)] w-full" />
+        ) : null
+        // <div className="flex gap-6 mx-auto p-6 max-w-3xl">
+        //     <CodeContainer
+        //       markups={[
+        //         { language: 'jsx', content: reactMarkup },
+        //         { language: 'markup', content: markup },
+        //         { language: 'markdown', content: plainText },
+        //       ]}
+        //       activeLang={activeLang}
+        //       setActiveLang={handleLangChange}
+        //     />
+        // </div>
       }
     </div>
   );

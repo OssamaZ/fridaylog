@@ -28,13 +28,15 @@ declare module "next-auth" {
 
 export const authOptions: NextAuthOptions = {
   callbacks: {
-    session: ({ session, user }) => ({
-      ...session,
-      user: {
-        ...session.user,
-        id: user.id,
-      },
-    }),
+    session: ({ session, token }) => {
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          id: token.sub,
+        },
+      };
+    },
   },
   pages: {
     signIn: "/auth/login",
@@ -42,6 +44,7 @@ export const authOptions: NextAuthOptions = {
     verifyRequest: "/auth/verify",
   },
   adapter: PrismaAdapter(prisma),
+  session: { strategy: "jwt" },
   providers: [
     EmailProvider({
       sendVerificationRequest: async function ({ identifier: email, url }) {

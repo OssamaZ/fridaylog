@@ -1,16 +1,9 @@
-import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
+import { signIn } from "next-auth/react";
+import { useState } from "react";
 
 export default function Login() {
-  const { status } = useSession();
-
   const [email, setEmail] = useState("w4rz4zi@gmail.com");
   const [loading, setIsLoading] = useState(false);
-
-  if (status === "authenticated") {
-    return <Redirect />;
-  }
 
   async function login() {
     setIsLoading(true);
@@ -30,8 +23,7 @@ export default function Login() {
       onSubmit={(e) => {
         e.preventDefault();
         void login();
-      }}
-    >
+      }}>
       <input
         className="border"
         value={email}
@@ -44,16 +36,4 @@ export default function Login() {
       </button>
     </form>
   );
-}
-
-function Redirect() {
-  const { replace } = useRouter();
-
-  useEffect(() => {
-    void replace({
-      pathname: "/",
-    });
-  }, []);
-
-  return <p>Redirecting ..</p>;
 }

@@ -22,7 +22,7 @@
     "prettier": "^3.0.3",
     "prettier-plugin-tailwindcss": "^0.5.1",
     "tsconfig": "workspace:*",
-    "turbo": "latest",
+    "turbo": "^1.10.16",
     "rimraf": "^5.0.1"
   },
   "packageManager": "bun@1.0.7",

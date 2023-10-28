@@ -25,7 +25,7 @@
     "turbo": "latest",
     "rimraf": "^5.0.1"
   },
-  "packageManager": "bun@1.0.4",
+  "packageManager": "bun@1.0.7",
   "workspaces": [
     "apps/*",
     "packages/*"

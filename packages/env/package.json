@@ -14,15 +14,15 @@
     "env:dev": "dotenv -- tsup --watch"
   },
   "dependencies": {
-    "@t3-oss/env-nextjs": "^0.6.1",
+    "@t3-oss/env-nextjs": "^0.7.1",
     "zod": "^3.22.4"
   },
   "devDependencies": {
-    "@types/node": "^17.0.12",
-    "tsconfig": "workspace:*",
+    "@types/node": "^20.8.9",
     "dotenv-cli": "^7.3.0",
-    "typescript": "^5.1.6",
+    "rimraf": "^5.0.1",
+    "tsconfig": "workspace:*",
     "tsup": "^6.1.3",
-    "rimraf": "^5.0.1"
+    "typescript": "^5.1.6"
   }
 }

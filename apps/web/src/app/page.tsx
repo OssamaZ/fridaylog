@@ -13,12 +13,7 @@ export default async function Home() {
       </Card>
       <ClientCard />
       <div className="flex space-x-2">
-        <Button variant="default">Button :)</Button>
-        <Button variant="secondary">Button :)</Button>
-        <Button variant="outline">Button :)</Button>
-        <Button variant="ghost">Button :)</Button>
-        <Button variant="link">Button :)</Button>
-        <Button variant="destructive">Button :)</Button>
+        <Button variant="default">Action</Button>
       </div>
     </main>
   );

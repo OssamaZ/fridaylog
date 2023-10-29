@@ -1,13 +1,13 @@
 "use client"
 
-import { api } from "@/trpc/react";
 import { Card } from "@fridaylog/ui";
+import { api } from "../trpc/react";
 
 export default function ClientCard() {
-  const hello = api.example.hello.useQuery({text: "client"})
+  const {data} = api.example.hello.useQuery({text: "client"})
   return (
     <Card title="Client">
-      {hello ? hello.data?.greeting : "Loading tRPC query..."}
+      {data ? data.greeting : "Loading tRPC query..."}
     </Card>
   )
 }

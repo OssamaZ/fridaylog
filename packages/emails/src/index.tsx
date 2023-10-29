@@ -25,7 +25,7 @@ export async function sendVerificationRequestEmail({
       from: "Ossama <ossama@fridaylog.com>",
       to: [email],
       subject: `Confirm your email`,
-      react: <MagicLinkEmail link={url} />,
+      // react: <MagicLinkEmail link={url} />,
       text: `Sign in to ${host}\n${url}\n\n`,
     }),
   });

@@ -17,6 +17,7 @@ export const env = createEnv({
       process.env.VERCEL ? z.string().min(1) : z.string().url()
     ),
     RESEND_API_KEY: z.string().min(1),
+    LOOPS_API_KEY: z.string().min(1),
   },
 
   /**
@@ -39,6 +40,7 @@ export const env = createEnv({
     NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
     NEXTAUTH_URL: process.env.NEXTAUTH_URL,
     RESEND_API_KEY: process.env.RESEND_API_KEY,
+    LOOPS_API_KEY: process.env.LOOPS_API_KEY,
     // Public
     NEXT_PUBLIC_APP_NAME: process.env.NEXT_PUBLIC_APP_NAME,
   },
